@@ -1,0 +1,9 @@
+web:
+  build: .
+  dockerfile: Dockerfile
+  links:
+    - redis
+  ports:
+    - "8099:80"
+redis:
+    image: redis:4-alpine
